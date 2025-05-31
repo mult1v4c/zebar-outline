@@ -1,0 +1,48 @@
+{
+  "$schema": "https://github.com/glzr-io/zebar/raw/v3.0.3/resources/zpack-schema.json",
+  "name": "outline",
+  "version": "0.0.0",
+  "description": "",
+  "tags": [],
+  "previewImages": [],
+  "repositoryUrl": "",
+  "widgets": [
+    {
+      "name": "outline",
+      "htmlPath": "./with-glazewm.html",
+      "zOrder": "top_most",
+      "shownInTaskbar": false,
+      "focused": false,
+      "resizable": false,
+      "transparent": true,
+      "includeFiles": [
+        "**/**"
+      ],
+      "caching": {
+        "defaultDuration": 604800,
+        "rules": []
+      },
+      "privileges": {
+        "shellCommands": []
+      },
+      "presets": [
+        {
+          "name": "outline-default",
+          "anchor": "top_center",
+          "offsetX": "0px",
+          "offsetY": "6px",
+          "width": "100%",
+          "height": "32px",
+          "monitorSelection": {
+            "type": "all"
+          },
+          "dockToEdge": {
+            "enabled": true,
+            "edge": null,
+            "windowMargin": "0px"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+@import '//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css';
+
+:root {
+  --bg-color: rgb(0 0 0 / 50%);
+  --text-color: #EEEEEE;
+  --outline: 1px solid #a1a1a1;
+  --bg-hover: rgb(255 255 255 / 90%);
+  --alpha: rbga(0 0 0 0);
+}
+
+i {
+  color: var(--text-color);
+  margin-right: 8px;
+}
+
+body {
+  margin-right: 6px;
+  margin-left: 6px;
+  padding-top: 6px;
+}
+
+body {
+  color: var(--text-color);
+  font-family: "Iosevka Aile Medium", monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+
+}
+
+#root {
+  background: var(--bg-color);
+  border: var(--outline);
+  border-radius: 8px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 4px 1.5vw;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.logo,
+.binding-mode,
+.tiling-direction,
+.network,
+.memory,
+.cpu,
+.battery {
+  margin-right: 20px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: var(--alpha);
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: var(--text-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.displayed {
+    background: var(--alpha);
+    border: none;
+  }
+
+  &.focused,
+  &:hover {
+    background: var(--alpha);
+    box-shadow: inset 0 0 0 1px #a1a1a1;
+  }
+}
+
+.binding-mode,
+.tiling-direction {
+  border: var(--outline);
+  color: var(--text-color);
+  background: var(--alpha);
+  border-radius: 4px;
+  line-height: 1;
+  padding: 4px 8px;
+  border: 0;
+  cursor: pointer;
+}
+
+.binding-mode {
+  margin-right: 4px;
+}
+
+.cpu .high-usage {
+  color: #900029;
+}
+
+.battery {
+  position: relative;
+}
+
+.battery .charging-icon {
+  position: absolute;
+  font-size: 7px;
+  left: -8px;
+  top: 3px;
+}
